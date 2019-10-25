@@ -4,15 +4,38 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public int maxLives;
+
+    public bool isDead;
+
+    #region Private Vars
+
+    private int currentLives;
+
+    #endregion
+
+    public event System.Action<float> OnHealthChanged = delegate { };
+
+    private void Start()
     {
-        
+
+        isDead = false;
+        currentLives = maxLives;
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public bool ModifyLives(int amount) {
+
+        currentLives += amount;
+
+        float livesPercentage = currentLives / (float)maxLives;
+        OnHealthChanged(livesPercentage);
+
+        isDead = currentLives < 1;
+
+        return isDead;
+
     }
+
 }
