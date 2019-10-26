@@ -2,10 +2,11 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour, IDamageable, IShooter
+public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 {
 
-    public string enemyName;
+    public bool     isEnemy;
+    public string   enemyName;
 
     public float minReactionTime;
     public float maxReactionTime;
@@ -32,9 +33,9 @@ public class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     #endregion
 
-    private void Start()
+    protected virtual void Start()
     {
-        
+
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
@@ -56,7 +57,7 @@ public class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     }
 
-    public void TakeDamage()
+    public virtual void TakeDamage()
     {
 
         if (characterStats.ModifyLives(-1))
@@ -66,11 +67,10 @@ public class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     }
 
-    public void OnAttack(IDamageable target)
+    public virtual void OnAttack(IDamageable target)
     {
 
         characterAnim.Attack();
-        target.TakeDamage();
 
     }
 

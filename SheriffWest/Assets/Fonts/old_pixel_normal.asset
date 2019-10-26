@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: old_pixel_normal
   m_EditorClassIdentifier: 
-  hashCode: -338505750
+  hashCode: -1016617892
   material: {fileID: 124191112278683283}
   materialHashCode: 839478288
   m_Version: 1.1.0

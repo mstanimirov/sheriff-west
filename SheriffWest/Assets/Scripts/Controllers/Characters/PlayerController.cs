@@ -3,11 +3,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IDamageable, IShooter
 {
-
+    
     #region Private Vars
 
     private bool    isCounting;
     private float   reactionTime;
+
+    private Weapon gun;
 
     private CharacterAnim characterAnim;
     private CharacterStats characterStats;
@@ -28,7 +30,9 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     private void Start()
     {
-        
+
+        gun = GetComponentInChildren<Weapon>();
+
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
@@ -65,7 +69,7 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
     {
 
         characterAnim.Attack();
-        target.TakeDamage();
+        gun.Shoot();
 
     }
 
