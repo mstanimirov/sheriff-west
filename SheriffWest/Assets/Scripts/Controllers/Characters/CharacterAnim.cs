@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterAnim : MonoBehaviour
 {
 
+    public System.Action OnContact = delegate { };
     public System.Action OnHitAnimOver = delegate { };
     public System.Action OnAttackAnimOver = delegate { };
 
@@ -54,6 +55,13 @@ public class CharacterAnim : MonoBehaviour
     {
 
         OnAttackAnimOver();
+
+    }
+
+    public void OnAttackContact()
+    {
+
+        OnContact();
 
     }
 
