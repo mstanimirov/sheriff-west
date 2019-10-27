@@ -5,8 +5,10 @@ using UnityEngine;
 public class CharacterStats : MonoBehaviour
 {
 
+    [Header("General Settings: ")]
     public int maxLives;
 
+    [HideInInspector]
     public bool isDead;
 
     #region Private Vars

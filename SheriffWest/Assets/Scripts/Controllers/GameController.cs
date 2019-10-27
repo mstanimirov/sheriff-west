@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour
     [HideInInspector]
     public static GameController instance;
 
+    [Header("General Settings:")]
     public List<EnemyController> enemies;
 
     #region Private Vars
@@ -69,10 +70,8 @@ public class GameController : MonoBehaviour
     {
 
         delay = 0;
-        target = 0;
+        target = -1;
         gameState = GameState.Target;
-
-        AimAt();
 
     }
 
@@ -121,8 +120,12 @@ public class GameController : MonoBehaviour
 
                 if (!enemy.IsDead()) {
 
-                    ShowPanel(false);
-                    StartCoroutine(StartCountDown());
+                    player.AlignWithTarget(enemy, () => {
+
+                        ShowPanel(false);
+                        StartCountDown();
+
+                    });
 
                 }
 
@@ -169,7 +172,7 @@ public class GameController : MonoBehaviour
         aimController.UpdatePosition();
 
         enemy = enemies[target];
-        gameplayScreen.SetShooterText(enemy.enemyName);
+        gameplayScreen.SetShooterText(enemy.GetName());
 
     }
 
@@ -240,6 +243,7 @@ public class GameController : MonoBehaviour
 
     public void EndRound() {
 
+        AimAt();
         ShowPanel(true);
         gameState = GameState.Target;
 
@@ -249,7 +253,13 @@ public class GameController : MonoBehaviour
 
     #region Round Timer
 
-    private IEnumerator StartCountDown()
+    public void StartCountDown() {
+
+        StartCoroutine(CountDown());
+        
+    }
+
+    private IEnumerator CountDown()
     {
 
         delay = 1f;

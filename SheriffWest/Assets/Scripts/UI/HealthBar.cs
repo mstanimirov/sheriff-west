@@ -9,28 +9,16 @@ public class HealthBar : MonoBehaviour
     [Header("General Settings:")]
     public float updateTime;
 
-    [Header("Attach Settings")]
-    public Transform parent;
-    public Vector3 position;
-
     [Header("Object Reference:")]
+    public GameObject healthBar;
     public Image foreground;
     public Image foreground2;
-    public GameObject healthBar;
 
     #region Private Vars
 
     private CharacterStats characterStats;
 
     #endregion
-
-    private void Awake()
-    {
-
-        //transform.SetParent(parent);
-        //transform.localPosition = position;
-
-    }
 
     private void Start()
     {

@@ -44,7 +44,7 @@ public class Bullet : MonoBehaviour
         IDamageable objToDamage = hitInfo.collider.GetComponent<IDamageable>();
 
         if (objToDamage != null)
-            objToDamage.TakeDamage();
+            objToDamage.TakeDamage(-1);
 
         ObjectPooler.instance.ReturnToPool(bulletPoolTag, gameObject);
 

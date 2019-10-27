@@ -3,16 +3,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IDamageable, IShooter
 {
-    
+
+    [Header("General Settings: ")]
+    public int speed;
+
     #region Private Vars
 
-    private bool    isCounting;
-    private float   reactionTime;
+    private int direction;
+
+    private State playerState;
+
+    private float reactionTime;
+    private float reachedDistance = 0.1f;
+
+    private Vector3 targetPosition;
+    private Vector3 smoothedPosition;
 
     private Weapon gun;
-
     private CharacterAnim characterAnim;
     private CharacterStats characterStats;
+
+    private event Action OnAlignComplete;
 
     #endregion
 
@@ -28,6 +39,15 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     #endregion
 
+    public enum State
+    {
+
+        Idle,
+        Moving,
+        Waiting
+
+    }
+
     private void Start()
     {
 
@@ -36,29 +56,57 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
-        characterAnim.OnAnimationOver += GameController.instance.EndRound;
+        characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
     }
 
     private void Update()
     {
 
-        if (isCounting)
-            reactionTime += Time.deltaTime;
+        switch (playerState)
+        {
+
+            case State.Idle:
+                break;
+
+            case State.Moving:
+
+                smoothedPosition = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+                transform.position = smoothedPosition;
+
+                if (Vector3.Distance(transform.position, targetPosition) < reachedDistance)
+                {
+
+                    transform.position = targetPosition;
+                    OnAlignComplete?.Invoke();
+
+                }
+
+                break;
+
+            case State.Waiting:
+
+                reactionTime += Time.deltaTime;
+
+                break;
+
+        }
 
     }
 
     private void OnDisable()
     {
 
-        characterAnim.OnAnimationOver -= GameController.instance.EndRound;
+        characterAnim.OnHitAnimOver -= GameController.instance.EndRound;
 
     }
 
-    public void TakeDamage()
+    #region Shooter/Damage Methods
+
+    public void TakeDamage(int amount)
     {
 
-        if (characterStats.ModifyLives(-1))
+        if (characterStats.ModifyLives(amount))
             characterAnim.Die();
         else
             characterAnim.TakeDamage();
@@ -73,18 +121,44 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     }
 
+    #endregion
+
     public void StartRound()
     {
 
         reactionTime = 0;
-        isCounting = true;
+        playerState = State.Waiting;
 
     }
 
     public void FinishRound()
     {
 
-        isCounting = false;
+        playerState = State.Idle;
+
+    }
+
+    public void AlignWithTarget(IShooter target, Action OnAlignComplete)
+    {
+
+        Vector3 alignTo = new Vector3(target.GetPosition().x, GetPosition().y, GetPosition().z);
+
+        StartAligning(alignTo, () => {
+
+            OnAlignComplete();
+            playerState = State.Idle;
+
+        });
+
+    }
+
+    public void StartAligning(Vector3 targetPosition, Action OnAlignComplete)
+    {
+
+        this.targetPosition = targetPosition;
+        this.OnAlignComplete = OnAlignComplete;
+
+        playerState = State.Moving;
 
     }
 

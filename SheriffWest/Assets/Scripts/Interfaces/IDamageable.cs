@@ -11,7 +11,7 @@ public interface IDamageable
 
     #region Damage
 
-    void TakeDamage();
+    void TakeDamage(int amount);
 
     #endregion
 

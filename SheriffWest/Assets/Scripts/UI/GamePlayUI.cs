@@ -6,6 +6,7 @@ using UnityEngine;
 public class GamePlayUI : MonoBehaviour
 {
 
+    [Header("Object References:")]
     public GameObject       panel;    
 
     public TextMeshProUGUI  infoText;

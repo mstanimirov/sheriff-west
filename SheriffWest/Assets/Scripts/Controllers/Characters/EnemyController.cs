@@ -5,9 +5,12 @@ using UnityEngine;
 public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 {
 
+    [Header("General Settings:")]
     public bool     isEnemy;
     public string   enemyName;
+    public string   enemyDeadName;
 
+    [Header("Combat Settings: ")]
     public float minReactionTime;
     public float maxReactionTime;
 
@@ -16,8 +19,8 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     private bool isCrRunning;
     private float reactionTime;
 
-    private CharacterAnim characterAnim;
-    private CharacterStats characterStats;
+    protected CharacterAnim characterAnim;
+    protected CharacterStats characterStats;
 
     #endregion
 
@@ -27,7 +30,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     public float GetReactionTime() => reactionTime;
 
-    public string GetName() => enemyName;
+    public string GetName() => IsDead() ? enemyDeadName : enemyName;
 
     public Vector3 GetPosition() => transform.position;
 
@@ -39,7 +42,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
-        characterAnim.OnAnimationOver += GameController.instance.EndRound;
+        characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
     }
 
@@ -53,14 +56,14 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     private void OnDisable()
     {
 
-        characterAnim.OnAnimationOver -= GameController.instance.EndRound;
+        characterAnim.OnHitAnimOver -= GameController.instance.EndRound;
 
     }
 
-    public virtual void TakeDamage()
+    public virtual void TakeDamage(int amount)
     {
 
-        if (characterStats.ModifyLives(-1))
+        if (characterStats.ModifyLives(amount))
             characterAnim.Die();
         else
             characterAnim.TakeDamage();

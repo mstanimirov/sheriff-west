@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectPooler : MonoBehaviour
 {
 
+    [HideInInspector]
     public static ObjectPooler instance;
 
     [System.Serializable]
@@ -29,6 +30,7 @@ public class ObjectPooler : MonoBehaviour
 
     }
 
+    [Header("General Settings: ")]
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> poolDictionary;
 

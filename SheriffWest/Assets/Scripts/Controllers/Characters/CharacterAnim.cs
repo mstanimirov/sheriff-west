@@ -5,7 +5,8 @@ using UnityEngine;
 public class CharacterAnim : MonoBehaviour
 {
 
-    public System.Action OnAnimationOver = delegate { };
+    public System.Action OnHitAnimOver = delegate { };
+    public System.Action OnAttackAnimOver = delegate { };
 
     #region Private Vars
 
@@ -45,20 +46,20 @@ public class CharacterAnim : MonoBehaviour
     public void OnDie()
     {
 
-        OnAnimationOver();
+        OnHitAnimOver();
 
     }
 
     public void OnAttack()
     {
 
-        //OnAnimationOver();
+        OnAttackAnimOver();
 
     }
 
     public void OnTakeDamage() {
 
-        OnAnimationOver();
+        OnHitAnimOver();
 
     }
 
