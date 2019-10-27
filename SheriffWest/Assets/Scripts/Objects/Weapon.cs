@@ -7,16 +7,20 @@ public class Weapon : MonoBehaviour
 
     [Header("General Settings:")]
     public Transform shotPoint;
+    public ShooterType shooterType;
 
-    #region Constants
+    public enum ShooterType
+    {
 
-    private readonly string bulletPoolTag = "Bullet";
+        Enemy,
+        Player
 
-    #endregion
+    }
 
-    public void Shoot() {
+    public void Shoot()
+    {
 
-        ObjectPooler.instance.GetFromPool(bulletPoolTag, shotPoint.position, shotPoint.rotation);
+        ObjectPooler.instance.GetFromPool(shooterType == ShooterType.Enemy ? Constants.bulletPoolTagE : Constants.bulletPoolTagP, shotPoint.position, shotPoint.rotation);
 
     }
 

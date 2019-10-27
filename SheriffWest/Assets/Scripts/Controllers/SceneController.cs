@@ -10,14 +10,12 @@ public class SceneController : MonoBehaviour
     public event Action BeforeSceneUnload;
 
     public float fadeDuration = 1f;
-    public string startingSceneName = "MainMenu";
 
     public CanvasGroup fadeCanvasGroup;
 
     #region Private Vars
 
     private bool isFading;
-    private string persistentSceneName = "PersistentScene";
 
     #endregion
 
@@ -26,7 +24,7 @@ public class SceneController : MonoBehaviour
     private IEnumerator Start()
     {
 
-        yield return StartCoroutine(FadeAndSwitchScenes(startingSceneName));
+        yield return StartCoroutine(FadeAndSwitchScenes(Constants.startingSceneName));
         StartCoroutine(Fade(0));
 
     }
@@ -46,7 +44,7 @@ public class SceneController : MonoBehaviour
 
         BeforeSceneUnload?.Invoke();
 
-        if (SceneManager.GetActiveScene().name != persistentSceneName)
+        if (SceneManager.GetActiveScene().name != Constants.persistentSceneName)
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
 
         yield return StartCoroutine(LoadSceneAndSetActive(sceneName));

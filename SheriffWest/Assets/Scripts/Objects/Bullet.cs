@@ -9,14 +9,9 @@ public class Bullet : MonoBehaviour
     public float speed;
     public float lifeTime;
 
+    public string bulletPoolTag;
     public LayerMask whatIsShootable;
-
-    #region Constants
-
-    private readonly string bulletPoolTag = "Bullet";
-
-    #endregion
-
+    
     private void Update()
     {
 
@@ -46,8 +41,14 @@ public class Bullet : MonoBehaviour
         if (objToDamage != null)
             objToDamage.TakeDamage(-1);
 
-        ObjectPooler.instance.ReturnToPool(bulletPoolTag, gameObject);
+        ReturnToPool();
 
+    }
+
+    public void ReturnToPool() {
+
+        ObjectPooler.instance.ReturnToPool(bulletPoolTag, gameObject);
+        
     }
 
 }

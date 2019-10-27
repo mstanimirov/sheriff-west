@@ -67,6 +67,22 @@ public class Chicken : EnemyController
 
     }
 
+    public override void Target()
+    {
+
+        base.Target();
+        gameObject.layer = 11;
+
+    }
+
+    public override void RemoveTarget()
+    {
+
+        base.RemoveTarget();
+        gameObject.layer = 10;
+
+    }
+
     public override void OnAttack(IDamageable target)
     {
 

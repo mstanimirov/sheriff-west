@@ -14,6 +14,9 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     public float minReactionTime;
     public float maxReactionTime;
 
+    [HideInInspector]
+    public bool isTarget;
+
     #region Private Vars
 
     private bool isCrRunning;
@@ -39,6 +42,8 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     protected virtual void Start()
     {
 
+        isTarget = false;
+
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
@@ -46,17 +51,22 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     }
 
-    private void Update()
-    {
-
-
-
-    }
-
     private void OnDisable()
     {
 
         characterAnim.OnHitAnimOver -= GameController.instance.EndRound;
+
+    }
+
+    public virtual void Target() {
+
+        isTarget = true;
+
+    }
+
+    public virtual void RemoveTarget() {
+
+        isTarget = false;
 
     }
 

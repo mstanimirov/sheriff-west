@@ -23,21 +23,21 @@ public class CharacterAnim : MonoBehaviour
 
     public void Die() {
 
-        characterAnimator.SetTrigger("die");
+        characterAnimator.SetTrigger(Constants.dieTrigger);
 
     }
     
 
     public void Attack() {
 
-        characterAnimator.SetTrigger("shoot");
+        characterAnimator.SetTrigger(Constants.shootTrigger);
 
     }
 
 
     public void TakeDamage() {
 
-        characterAnimator.SetTrigger("damage");
+        characterAnimator.SetTrigger(Constants.damageTrigger);
 
     }
 

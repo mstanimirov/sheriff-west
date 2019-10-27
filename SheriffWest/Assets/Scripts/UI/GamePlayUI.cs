@@ -34,14 +34,14 @@ public class GamePlayUI : MonoBehaviour
     {
 
         infoText.SetText(value);
-        infoAnimator.SetTrigger("Show");
+        infoAnimator.SetTrigger(Constants.uiShow);
 
     }
 
     public void ShowPanel(bool show)
     {
 
-        panelAnimator.SetTrigger(show ? "Show" : "Hide");
+        panelAnimator.SetTrigger(show ? Constants.uiShow : Constants.uiHide);
 
     }
 
@@ -49,7 +49,7 @@ public class GamePlayUI : MonoBehaviour
     {
 
         timerText.SetText(value);
-        timerAnimator.SetTrigger("Popup");
+        timerAnimator.SetTrigger(Constants.uiPopup);
 
     }
 

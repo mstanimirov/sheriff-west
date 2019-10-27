@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPoint: {fileID: 7323464859214331757}
+  shooterType: 1
 --- !u!1001 &3883691308028577973
 PrefabInstance:
   m_ObjectHideFlags: 0

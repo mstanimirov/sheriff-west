@@ -33,10 +33,6 @@ public class GameController : MonoBehaviour
 
     #region Constants
 
-    private readonly string draw = "draw!";
-    private readonly string ready = "ready";
-    private readonly string steady = "steady";
-
     private readonly WaitForSeconds textRefresh = new WaitForSeconds(1f);
 
     #endregion
@@ -111,6 +107,9 @@ public class GameController : MonoBehaviour
         if (player.IsDead())
             return;
 
+        if (target < 0)
+            return;
+
         if (delay > 0)
             return;
 
@@ -156,12 +155,16 @@ public class GameController : MonoBehaviour
             return;
 
         if (gameState != GameState.Target)
-            return;        
+            return;
+
+        if (target > -1)
+            enemies[target].RemoveTarget();
 
         target++;
         if (target > enemies.Count - 1)
             target = 0;
 
+        enemy = enemies[target];
         AimAt();
 
     }
@@ -171,7 +174,7 @@ public class GameController : MonoBehaviour
         aimController.SetTarget(enemies[target].transform);
         aimController.UpdatePosition();
 
-        enemy = enemies[target];
+        enemy.Target();
         gameplayScreen.SetShooterText(enemy.GetName());
 
     }
@@ -268,10 +271,10 @@ public class GameController : MonoBehaviour
         gameState = GameState.Prep;
         yield return textRefresh;
 
-        gameplayScreen.SetTimerText(ready);
+        gameplayScreen.SetTimerText(Constants.gameReady);
         yield return textRefresh;
 
-        gameplayScreen.SetTimerText(steady);
+        gameplayScreen.SetTimerText(Constants.gameSteady);
         yield return textRefresh;
 
         float randomTime = Random.Range(0.5f, 4f);
@@ -280,7 +283,7 @@ public class GameController : MonoBehaviour
         isCrRunning = false;
 
         gameState = GameState.Shot;
-        gameplayScreen.SetTimerText(draw);
+        gameplayScreen.SetTimerText(Constants.gameDraw);
 
         enemy.StartRound();
         player.StartRound();

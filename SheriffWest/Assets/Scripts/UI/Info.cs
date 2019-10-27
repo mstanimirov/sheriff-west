@@ -26,7 +26,7 @@ public class Info : MonoBehaviour
     public void ShowInfoText(string value) {
 
         infoText.SetText(value);
-        infoAnimator.SetTrigger("Show");
+        infoAnimator.SetTrigger(Constants.uiShow);
 
     }
 
