@@ -30,18 +30,12 @@ public class HealthBar : MonoBehaviour
 
     }
 
-    private void LateUpdate()
-    {
-
-        
-
-    }
-
     private void HandleHealthChanged(float percent)
     {
 
 
-        healthBar.SetActive(true);
+        if (percent != 0)
+            healthBar.SetActive(true);
         foreground2.fillAmount = percent;
 
         StopAllCoroutines();

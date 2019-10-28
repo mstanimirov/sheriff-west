@@ -7,6 +7,12 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
     [Header("General Settings: ")]
     public int speed;
 
+    [Header("Object References: ")]
+    public GameObject liveGraphic;
+    public GameObject deadGraphic;
+
+    public GameObject bloodParticle;
+
     #region Private Vars
 
     private int direction;
@@ -56,6 +62,7 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
+        characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
     }
@@ -97,6 +104,7 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
     private void OnDisable()
     {
 
+        characterAnim.OnDeathOver -= OnDeath;
         characterAnim.OnHitAnimOver -= GameController.instance.EndRound;
 
     }
@@ -105,6 +113,8 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     public void TakeDamage(int amount)
     {
+
+        bloodParticle.SetActive(true);
 
         if (characterStats.ModifyLives(amount))
             characterAnim.Die();
@@ -159,6 +169,15 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
         this.OnAlignComplete = OnAlignComplete;
 
         playerState = State.Moving;
+
+    }
+
+    public void OnDeath() {
+
+        GameController.instance.EndRound();
+
+        liveGraphic.SetActive(false);
+        deadGraphic.SetActive(true);
 
     }
 

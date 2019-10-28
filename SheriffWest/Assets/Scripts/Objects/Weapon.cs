@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour
     public void Shoot()
     {
 
+        CameraController.instance.Shake(.15f, .1f);
         ObjectPooler.instance.GetFromPool(shooterType == ShooterType.Enemy ? Constants.bulletPoolTagE : Constants.bulletPoolTagP, shotPoint.position, shotPoint.rotation);
 
     }

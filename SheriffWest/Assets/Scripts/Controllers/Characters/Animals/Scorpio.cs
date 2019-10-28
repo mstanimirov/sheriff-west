@@ -37,7 +37,7 @@ public class Scorpio : EnemyController
 
         base.Start();
 
-        characterAnim.OnContact += DealDamage;
+        characterAnim.OnContactOver += DealDamage;
         characterAnim.OnAttackAnimOver += SlideBack;
 
     }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class Enemy : EnemyController
 {
 
+    [Header("Custom Settings: ")]
+    public GameObject bloodParticle;
+
     #region Private Vars
 
     private Weapon gun;
@@ -24,6 +27,14 @@ public class Enemy : EnemyController
 
         base.OnAttack(target);
         gun.Shoot();
+
+    }
+
+    public override void TakeDamage(int amount)
+    {
+
+        bloodParticle.SetActive(true);
+        base.TakeDamage(amount);
 
     }
 

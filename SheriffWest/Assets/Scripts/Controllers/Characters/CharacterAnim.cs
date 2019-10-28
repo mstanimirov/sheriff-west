@@ -5,7 +5,8 @@ using UnityEngine;
 public class CharacterAnim : MonoBehaviour
 {
 
-    public System.Action OnContact = delegate { };
+    public System.Action OnDeathOver = delegate { };
+    public System.Action OnContactOver = delegate { };
     public System.Action OnHitAnimOver = delegate { };
     public System.Action OnAttackAnimOver = delegate { };
 
@@ -47,7 +48,7 @@ public class CharacterAnim : MonoBehaviour
     public void OnDie()
     {
 
-        OnHitAnimOver();
+        OnDeathOver();
 
     }
 
@@ -61,13 +62,19 @@ public class CharacterAnim : MonoBehaviour
     public void OnAttackContact()
     {
 
-        OnContact();
+        OnContactOver();
 
     }
 
     public void OnTakeDamage() {
 
         OnHitAnimOver();
+
+    }
+
+    public void ShakeCamera() {
+
+        CameraController.instance.Shake(.15f, .05f);
 
     }
 

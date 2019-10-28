@@ -151,7 +151,7 @@ public class GameController : MonoBehaviour
         if (player.IsDead())
             return;
 
-        if (enemies.Count <= 1)
+        if (enemies.Count < 1)
             return;
 
         if (gameState != GameState.Target)

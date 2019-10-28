@@ -14,6 +14,7 @@ public class CharacterStats : MonoBehaviour
     #region Private Vars
 
     private int currentLives;
+    private BoxCollider boxCollider;
 
     #endregion
 
@@ -25,6 +26,8 @@ public class CharacterStats : MonoBehaviour
         isDead = false;
         currentLives = maxLives;
 
+        boxCollider = GetComponent<BoxCollider>();
+
     }
 
     public bool ModifyLives(int amount) {
@@ -34,7 +37,13 @@ public class CharacterStats : MonoBehaviour
         float livesPercentage = currentLives / (float)maxLives;
         OnHealthChanged(livesPercentage);
 
-        isDead = currentLives < 1;
+        if (currentLives < 1) {
+
+            isDead = true;
+            boxCollider.enabled = false;
+
+
+        }
 
         return isDead;
 

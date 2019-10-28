@@ -14,6 +14,10 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     public float minReactionTime;
     public float maxReactionTime;
 
+    [Header("Object Reference: ")]
+    public GameObject liveGraphic;
+    public GameObject deadGraphic;
+
     [HideInInspector]
     public bool isTarget;
 
@@ -47,6 +51,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
         characterStats = GetComponent<CharacterStats>();
         characterAnim = GetComponentInChildren<CharacterAnim>();
 
+        characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
     }
@@ -54,6 +59,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     private void OnDisable()
     {
 
+        characterAnim.OnDeathOver -= OnDeath;
         characterAnim.OnHitAnimOver -= GameController.instance.EndRound;
 
     }
@@ -118,5 +124,18 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     }
 
     #endregion
+    public void OnDeath() {
+
+        GameController.instance.EndRound();
+
+        if (deadGraphic) {
+
+            liveGraphic.SetActive(false);
+            deadGraphic.SetActive(true);
+
+        }
+
+    }
+
 
 }
