@@ -7,6 +7,7 @@ public class Scorpio : EnemyController
 
     [Header("Custom Settings: ")]
     public int speed;
+    public GameObject bloodParticle;
 
     #region Private Vars
 
@@ -90,6 +91,7 @@ public class Scorpio : EnemyController
     {
 
         target.TakeDamage(-1);
+        CameraController.instance.Shake(.15f, .05f);
 
     }
 
@@ -112,6 +114,14 @@ public class Scorpio : EnemyController
             state = State.Idle;
 
         });
+
+    }
+
+    public override void TakeDamage(int amount)
+    {
+
+        bloodParticle.SetActive(true);
+        base.TakeDamage(amount);
 
     }
 

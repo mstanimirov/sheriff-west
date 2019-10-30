@@ -132,6 +132,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,7 +214,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 75605782}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,6 +247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -320,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128027346}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,6 +420,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,6 +504,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -570,6 +590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -647,7 +672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 347533068}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -669,12 +694,6 @@ Transform:
   m_Father: {fileID: 1814117152}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &372834170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-    type: 3}
-  m_PrefabInstance: {fileID: 4342250733461127576}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &376936628
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,7 +703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 376936629}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -717,6 +736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -795,7 +819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402810618}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -860,6 +884,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -941,6 +970,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1018,7 +1052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 523579536}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,6 +1085,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -1129,7 +1168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554985416}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,6 +1201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -1240,7 +1284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 594913014}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,6 +1317,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -1351,7 +1400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655643672}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1382,7 +1431,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 658972824}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1507,6 +1556,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1584,7 +1638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 750189787}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,6 +1671,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -1695,7 +1754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 763143480}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1726,7 +1785,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 766526006}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1813,7 +1872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 781732496}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,6 +1905,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -2101,8 +2165,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 372834170}
-  - {fileID: 1773471262}
+  - {fileID: 1811992491}
+  - {fileID: 2016792488}
   - {fileID: 1615617035}
   - {fileID: 778583758}
   - {fileID: 1814117152}
@@ -2123,8 +2187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 1773471263}
+  - {fileID: 1289007250}
   - {fileID: 1615617036}
+  freeShoot: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2490,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2504,6 +2574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -2585,6 +2660,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2665,6 +2745,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2742,7 +2827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1070239164}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2773,7 +2858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1100281127}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2806,6 +2891,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -2884,7 +2974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1108032929}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3091,7 +3181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1158115605}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3186,7 +3276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1205183240}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3526,6 +3616,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1270000158}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1289007250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8039119492806286677, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2016792487}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de79ee4981fa4f54f80d2028a32371a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1292154692
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1292154693}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3842,7 +3944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1313110287}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3875,6 +3977,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -3956,6 +4063,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4036,6 +4148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4113,7 +4230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1425591572}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4174,6 +4291,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1446305557}
+  - component: {fileID: 1446305558}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -4196,6 +4314,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446305558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446305556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b292cbb5ecb78a43a49d2842ecd8ac3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 963194227}
+  speed: 0
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1460240159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4205,7 +4338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460240160}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4318,6 +4451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -4484,6 +4622,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6654321354493245902, guid: 50f0d8f88c0b8564384794252ba119ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50f0d8f88c0b8564384794252ba119ac, type: 3}
 --- !u!4 &1615617035 stripped
@@ -4563,6 +4706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -4644,6 +4792,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert0
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4721,7 +4874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728376700}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4752,7 +4905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1733223446}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4854,24 +5007,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1746404108}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1773471262 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 8039119491035437898}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1773471263 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8039119492806286677, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 8039119491035437898}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de79ee4981fa4f54f80d2028a32371a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1786950368
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,7 +5016,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1786950369}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4912,7 +5047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1805523463}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,6 +5080,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -5014,6 +5154,141 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1809459941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1811992490
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 906585669}
+    m_Modifications:
+    - target: {fileID: 4342250733695516385, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342250733938177544, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151496993152760590, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 4.9999695
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151496993152760590, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908739570893695356, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.000007698193
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908739570893695356, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.272222e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908739570893695356, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.2722221e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829813262802592499, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.000007698193
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829813262802592499, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 1.272222e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1829813262802592499, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 1.2722221e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905851744130995419, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -85.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905851744130995419, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.9974683e-13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905851744130995419, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 3.8555186e-13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d6412d4a1de823f4a97ae64f07cbaabc, type: 3}
+--- !u!4 &1811992491 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1811992490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1814117151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5023,7 +5298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1814117152}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5087,6 +5362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 08b299184790213488be932ab4da985e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 08b299184790213488be932ab4da985e,
         type: 3}
@@ -5167,6 +5447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -5280,6 +5565,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5360,6 +5650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ground_desert1
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5439,7 +5734,8 @@ GameObject:
   - component: {fileID: 1968753118}
   - component: {fileID: 1968753120}
   - component: {fileID: 1968753119}
-  m_Layer: 0
+  - component: {fileID: 1968753121}
+  m_Layer: 13
   m_Name: Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5486,6 +5782,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 2, z: 2}
   m_Center: {x: 0, y: 1, z: 8}
+--- !u!65 &1968753121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968753117}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2, z: 14}
+  m_Center: {x: 0, y: -1, z: 0}
 --- !u!1 &1977295752
 GameObject:
   m_ObjectHideFlags: 0
@@ -5495,7 +5804,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1977295753}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5526,7 +5835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2009335594}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5548,6 +5857,86 @@ Transform:
   m_Father: {fileID: 1814117152}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2016792487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 906585669}
+    m_Modifications:
+    - target: {fileID: 8039119492806286679, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_Name
+      value: Bandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8039119492577806738, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c21ec85f610e4f44ae0e3132b6725ce, type: 3}
+--- !u!4 &2016792488 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 2016792487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2030691326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5559,6 +5948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ground_desert1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d373f414f34e8f946ab17e3f091e7082,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d373f414f34e8f946ab17e3f091e7082,
         type: 3}
@@ -5637,7 +6031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2085772583}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5668,7 +6062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2115148040}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GroundDesert1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5690,186 +6084,3 @@ Transform:
   m_Father: {fileID: 1814117152}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4342250733461127576
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 906585669}
-    m_Modifications:
-    - target: {fileID: 4342250733695516385, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4342250733938177547, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 963194227}
-    - target: {fileID: 2343139492808197550, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1838990622797832619, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 5905819306512306676, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509703770074889913, guid: d6412d4a1de823f4a97ae64f07cbaabc,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d6412d4a1de823f4a97ae64f07cbaabc, type: 3}
---- !u!1001 &8039119491035437898
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 906585669}
-    m_Modifications:
-    - target: {fileID: 8039119492806286679, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_Name
-      value: Bandit
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8039119492577806737, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 963194227}
-    - target: {fileID: 2067536524353351710, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1270429550607617740, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7097837835099399067, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2c21ec85f610e4f44ae0e3132b6725ce, type: 3}

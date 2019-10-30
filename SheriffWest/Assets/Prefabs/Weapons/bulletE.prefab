@@ -97,7 +97,7 @@ MonoBehaviour:
   bulletPoolTag: BulletE
   whatIsShootable:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 9728
 --- !u!65 &8904854004567936190
 BoxCollider:
   m_ObjectHideFlags: 0

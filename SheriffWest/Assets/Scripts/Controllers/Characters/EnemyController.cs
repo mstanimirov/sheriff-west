@@ -15,6 +15,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     public float maxReactionTime;
 
     [Header("Object Reference: ")]
+    public GameObject statsPanel;
     public GameObject liveGraphic;
     public GameObject deadGraphic;
 
@@ -67,12 +68,14 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     public virtual void Target() {
 
         isTarget = true;
+        statsPanel.SetActive(true);
 
     }
 
     public virtual void RemoveTarget() {
 
         isTarget = false;
+        statsPanel.SetActive(false);
 
     }
 

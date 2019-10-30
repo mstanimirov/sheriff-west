@@ -11,13 +11,11 @@ public class GamePlayUI : MonoBehaviour
 
     public TextMeshProUGUI  infoText;
     public TextMeshProUGUI  timerText;
-    public TextMeshProUGUI  shooterText;
 
     #region Private Vars
 
     private Animator infoAnimator;
     private Animator timerAnimator;
-    private Animator panelAnimator;
 
     #endregion
 
@@ -25,7 +23,6 @@ public class GamePlayUI : MonoBehaviour
     {
 
         infoAnimator = infoText.GetComponentInParent<Animator>();
-        panelAnimator = panel.GetComponent<Animator>();
         timerAnimator = timerText.GetComponent<Animator>();
 
     }    
@@ -38,25 +35,11 @@ public class GamePlayUI : MonoBehaviour
 
     }
 
-    public void ShowPanel(bool show)
-    {
-
-        panelAnimator.SetTrigger(show ? Constants.uiShow : Constants.uiHide);
-
-    }
-
     public void SetTimerText(string value)
     {
 
         timerText.SetText(value);
         timerAnimator.SetTrigger(Constants.uiPopup);
-
-    }
-
-    public void SetShooterText(string value)
-    {
-
-        shooterText.SetText(value);
 
     }
 

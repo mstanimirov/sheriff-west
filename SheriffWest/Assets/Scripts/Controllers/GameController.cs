@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour
     [Header("General Settings:")]
     public List<EnemyController> enemies;
 
+    [Header("Debug Settings: ")]
+    public bool freeShoot;
+
     #region Private Vars
 
     private int target;
@@ -113,6 +116,18 @@ public class GameController : MonoBehaviour
         if (delay > 0)
             return;
 
+        if (freeShoot) {
+
+            player.AlignWithTarget(enemy, () => {
+
+                player.OnAttack(enemy);
+
+            });
+
+            return;
+
+        }
+
         switch (gameState) {
 
             case GameState.Target:                
@@ -121,7 +136,6 @@ public class GameController : MonoBehaviour
 
                     player.AlignWithTarget(enemy, () => {
 
-                        ShowPanel(false);
                         StartCountDown();
 
                     });
@@ -171,17 +185,10 @@ public class GameController : MonoBehaviour
 
     public void AimAt() {
 
-        aimController.SetTarget(enemies[target].transform);
+        aimController.SetTarget(enemy.transform);
         aimController.UpdatePosition();
 
         enemy.Target();
-        gameplayScreen.SetShooterText(enemy.GetName());
-
-    }
-
-    public void ShowPanel(bool show) {
-
-        gameplayScreen.ShowPanel(show);
 
     }
 
@@ -247,7 +254,6 @@ public class GameController : MonoBehaviour
     public void EndRound() {
 
         AimAt();
-        ShowPanel(true);
         gameState = GameState.Target;
 
     }
@@ -269,15 +275,12 @@ public class GameController : MonoBehaviour
         isCrRunning = true;
 
         gameState = GameState.Prep;
-        yield return textRefresh;
-
         gameplayScreen.SetTimerText(Constants.gameReady);
         yield return textRefresh;
 
         gameplayScreen.SetTimerText(Constants.gameSteady);
-        yield return textRefresh;
 
-        float randomTime = Random.Range(0.5f, 4f);
+        float randomTime = Random.Range(1f, 5f);
         yield return new WaitForSeconds(randomTime);
 
         isCrRunning = false;
