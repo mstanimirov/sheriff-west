@@ -7,8 +7,8 @@ public class GamePlayUI : MonoBehaviour
 {
 
     [Header("Object References:")]
-    public GameObject       panel;    
-
+    public Animator btnAnimator;
+    public Animator btnAnimator2;
     public TextMeshProUGUI  infoText;
     public TextMeshProUGUI  timerText;
 
@@ -25,7 +25,7 @@ public class GamePlayUI : MonoBehaviour
         infoAnimator = infoText.GetComponentInParent<Animator>();
         timerAnimator = timerText.GetComponent<Animator>();
 
-    }    
+    }
 
     public void ShowInfo(string value)
     {
@@ -40,6 +40,19 @@ public class GamePlayUI : MonoBehaviour
 
         timerText.SetText(value);
         timerAnimator.SetTrigger(Constants.uiPopup);
+
+    }
+
+    public void UnlockNextLevel() {
+
+        btnAnimator.SetTrigger("Show");
+
+    }
+
+    public void RestartLevel()
+    {
+
+        btnAnimator2.SetTrigger("Show");
 
     }
 

@@ -15,13 +15,15 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     public float maxReactionTime;
 
     [Header("Object Reference: ")]
-    public GameObject statsPanel;
+    public Sprite thumb;
+
+    public GameObject infoPanel;
     public GameObject liveGraphic;
     public GameObject deadGraphic;
 
     [HideInInspector]
     public bool isTarget;
-
+    
     #region Private Vars
 
     private bool isCrRunning;
@@ -38,26 +40,35 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     public float GetReactionTime() => reactionTime;
 
-    public string GetName() => IsDead() ? enemyDeadName : enemyName;
+    public string GetCharacterName() => IsDead() ? enemyDeadName : enemyName;
+
+    public Sprite GetThumb() => thumb;
 
     public Vector3 GetPosition() => transform.position;
 
+    public CharacterStats GetCharacterStats() => characterStats;
+
     #endregion
+
+    protected virtual void Awake()
+    {
+        
+        characterStats = GetComponent<CharacterStats>();
+        characterAnim = GetComponentInChildren<CharacterAnim>();        
+
+    }
 
     protected virtual void Start()
     {
 
         isTarget = false;
 
-        characterStats = GetComponent<CharacterStats>();
-        characterAnim = GetComponentInChildren<CharacterAnim>();
-
         characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
     }
 
-    private void OnDisable()
+    protected virtual void OnDisable()
     {
 
         characterAnim.OnDeathOver -= OnDeath;
@@ -65,17 +76,10 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 
     }
 
-    public virtual void Target() {
+    public virtual void Target(bool target) {
 
-        isTarget = true;
-        statsPanel.SetActive(true);
-
-    }
-
-    public virtual void RemoveTarget() {
-
-        isTarget = false;
-        statsPanel.SetActive(false);
+        isTarget = target;
+        infoPanel.SetActive(target);
 
     }
 
@@ -127,7 +131,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     }
 
     #endregion
-    public void OnDeath() {
+    public virtual void OnDeath() {
 
         GameController.instance.EndRound();
 

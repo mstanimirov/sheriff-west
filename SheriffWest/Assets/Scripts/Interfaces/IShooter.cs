@@ -9,9 +9,13 @@ public interface IShooter
 
     float GetReactionTime();
 
-    string GetName();
+    string GetCharacterName();
+
+    Sprite GetThumb();
 
     Vector3 GetPosition();
+
+    CharacterStats GetCharacterStats();
 
     #region Combat
 

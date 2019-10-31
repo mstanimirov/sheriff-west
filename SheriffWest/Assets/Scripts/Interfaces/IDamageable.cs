@@ -4,9 +4,7 @@ using UnityEngine;
 
 public interface IDamageable
 {
-
-    string GetName();
-
+    
     Vector3 GetPosition();
 
     #region Damage

@@ -30,6 +30,13 @@ public class Chicken : EnemyController
 
     }
 
+    protected override void Awake()
+    {
+
+        base.Awake();        
+
+    }
+
     protected override void Start()
     {
 
@@ -37,6 +44,14 @@ public class Chicken : EnemyController
 
         direction = isLeft ? -2 : 2;
         characterAnim.OnAttackAnimOver += GameController.instance.EndRound;
+
+    }
+
+    protected override void OnDisable()
+    {
+
+        base.OnDisable();
+        characterAnim.OnAttackAnimOver -= GameController.instance.EndRound;
 
     }
 
@@ -67,19 +82,11 @@ public class Chicken : EnemyController
 
     }
 
-    public override void Target()
+    public override void Target(bool target)
     {
 
-        base.Target();
-        gameObject.layer = 11;
-
-    }
-
-    public override void RemoveTarget()
-    {
-
-        base.RemoveTarget();
-        gameObject.layer = 10;
+        base.Target(target);
+        gameObject.layer = target ? 11 : 10;
 
     }
 

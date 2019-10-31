@@ -566,3 +566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a00eadd825e7d4288a48025117abea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelAt: 0
+  maxLevels: 3
+  sceneController: {fileID: 1737848218}
+  resetOnStart: 1

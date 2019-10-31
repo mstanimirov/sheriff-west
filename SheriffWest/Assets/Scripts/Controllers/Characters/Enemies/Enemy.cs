@@ -14,10 +14,10 @@ public class Enemy : EnemyController
 
     #endregion
 
-    protected override void Start()
+    protected override void Awake()
     {
 
-        base.Start();
+        base.Awake();
         gun = GetComponentInChildren<Weapon>();
 
     }
@@ -35,6 +35,14 @@ public class Enemy : EnemyController
 
         bloodParticle.SetActive(true);
         base.TakeDamage(amount);
+
+    }
+
+    public override void OnDeath()
+    {
+
+        base.OnDeath();
+        GameController.instance.UnlockNextLevel();
 
     }
 

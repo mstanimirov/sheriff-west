@@ -16,7 +16,7 @@ public class CharacterAnim : MonoBehaviour
 
     #endregion
 
-    private void Start()
+    private void Awake()
     {
 
         characterAnimator = GetComponent<Animator>();

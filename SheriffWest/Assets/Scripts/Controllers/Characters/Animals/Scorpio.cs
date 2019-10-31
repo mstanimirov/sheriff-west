@@ -33,6 +33,13 @@ public class Scorpio : EnemyController
 
     }
 
+    protected override void Awake()
+    {
+
+        base.Awake();        
+
+    }
+
     protected override void Start()
     {
 
@@ -40,6 +47,16 @@ public class Scorpio : EnemyController
 
         characterAnim.OnContactOver += DealDamage;
         characterAnim.OnAttackAnimOver += SlideBack;
+
+    }
+
+    protected override void OnDisable()
+    {
+
+        base.OnDisable();
+
+        characterAnim.OnContactOver -= DealDamage;
+        characterAnim.OnAttackAnimOver -= SlideBack;
 
     }
 

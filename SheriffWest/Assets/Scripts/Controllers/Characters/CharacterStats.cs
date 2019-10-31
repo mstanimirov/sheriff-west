@@ -20,13 +20,18 @@ public class CharacterStats : MonoBehaviour
 
     public event System.Action<float> OnHealthChanged = delegate { };
 
+    private void Awake()
+    {
+
+        boxCollider = GetComponent<BoxCollider>();
+
+    }
+
     private void Start()
     {
 
         isDead = false;
         currentLives = maxLives;
-
-        boxCollider = GetComponent<BoxCollider>();
 
     }
 

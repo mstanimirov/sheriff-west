@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     [Header("General Settings:")]
+    public int nextLevel;
     public List<EnemyController> enemies;
 
     [Header("Debug Settings: ")]
@@ -25,6 +26,8 @@ public class GameController : MonoBehaviour
 
     private GameState gameState;
     private InputMaster inputMaster;
+
+    private GameManager gameManager;
 
     private GamePlayUI gameplayScreen;
     private AimController aimController;
@@ -62,6 +65,8 @@ public class GameController : MonoBehaviour
 
         gameplayScreen = FindObjectOfType<GamePlayUI>();
         aimController = FindObjectOfType<AimController>();
+
+        gameManager = GameManager.instance;
 
     }
 
@@ -172,7 +177,7 @@ public class GameController : MonoBehaviour
             return;
 
         if (target > -1)
-            enemies[target].RemoveTarget();
+            enemies[target].Target(false);
 
         target++;
         if (target > enemies.Count - 1)
@@ -188,9 +193,9 @@ public class GameController : MonoBehaviour
         aimController.SetTarget(enemy.transform);
         aimController.UpdatePosition();
 
-        enemy.Target();
+        enemy.Target(true);
 
-    }
+    }       
 
     #region Score
 
@@ -271,7 +276,7 @@ public class GameController : MonoBehaviour
     private IEnumerator CountDown()
     {
 
-        delay = 1f;
+        delay = 0.25f;
         isCrRunning = true;
 
         gameState = GameState.Prep;
@@ -290,6 +295,51 @@ public class GameController : MonoBehaviour
 
         enemy.StartRound();
         player.StartRound();
+
+    }
+
+    #endregion
+
+    #region Button Functions
+
+    public void MainMenu()
+    {
+
+        gameManager.MainMenu();
+
+    }
+
+    public void ReloadLevel()
+    {
+
+        gameManager.LoadLevel(nextLevel - 1);
+
+    }
+
+    public void LoadNextLevel() {
+
+        gameManager.LoadLevel(nextLevel);
+
+    }
+
+    public void UnlockNextLevel()
+    {
+
+        if (gameManager.levelAt < nextLevel) {
+
+            gameManager.levelAt = nextLevel;
+            gameManager.SaveData();
+
+        }
+
+        gameplayScreen.UnlockNextLevel();
+
+    }
+
+    public void ShowReloadButton()
+    {
+
+        gameplayScreen.RestartLevel();
 
     }
 

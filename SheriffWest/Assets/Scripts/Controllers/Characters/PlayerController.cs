@@ -6,8 +6,11 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     [Header("General Settings: ")]
     public int speed;
+    public string playerName;
 
     [Header("Object References: ")]
+    public Sprite thumb;
+
     public GameObject liveGraphic;
     public GameObject deadGraphic;
 
@@ -33,15 +36,19 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     #endregion
 
-    #region Getters/Setters
+    #region IShoote/Idamageable
 
     public bool IsDead() => characterStats.isDead;
 
     public float GetReactionTime() => reactionTime;
 
-    public string GetName() => tag;
+    public string GetCharacterName() => playerName;
+
+    public Sprite GetThumb() => thumb;
 
     public Vector3 GetPosition() => transform.position;
+
+    public CharacterStats GetCharacterStats() => characterStats;
 
     #endregion
 
@@ -54,13 +61,18 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
     }
 
-    private void Start()
+    private void Awake()
     {
 
         gun = GetComponentInChildren<Weapon>();
 
         characterStats = GetComponent<CharacterStats>();
-        characterAnim = GetComponentInChildren<CharacterAnim>();
+        characterAnim = GetComponentInChildren<CharacterAnim>();        
+
+    }
+
+    private void Start()
+    {
 
         characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
@@ -178,6 +190,8 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
 
         liveGraphic.SetActive(false);
         deadGraphic.SetActive(true);
+
+        GameController.instance.ShowReloadButton();
 
     }
 
