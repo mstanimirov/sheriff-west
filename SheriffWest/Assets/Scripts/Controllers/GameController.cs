@@ -305,6 +305,9 @@ public class GameController : MonoBehaviour
     public void MainMenu()
     {
 
+        if (!gameManager)
+            return;
+
         gameManager.MainMenu();
 
     }
@@ -312,11 +315,17 @@ public class GameController : MonoBehaviour
     public void ReloadLevel()
     {
 
+        if (!gameManager)
+            return;
+
         gameManager.LoadLevel(nextLevel - 1);
 
     }
 
     public void LoadNextLevel() {
+
+        if (!gameManager)
+            return;
 
         gameManager.LoadLevel(nextLevel);
 
@@ -324,6 +333,9 @@ public class GameController : MonoBehaviour
 
     public void UnlockNextLevel()
     {
+
+        if (!gameManager)
+            return;
 
         if (gameManager.levelAt < nextLevel) {
 
@@ -338,6 +350,9 @@ public class GameController : MonoBehaviour
 
     public void ShowReloadButton()
     {
+
+        if (!gameManager)
+            return;
 
         gameplayScreen.RestartLevel();
 
