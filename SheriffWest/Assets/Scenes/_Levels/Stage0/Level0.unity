@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4612645, g: 0.35987046, b: 0.22726566, a: 1}
+  m_IndirectSpecularColor: {r: 0.43508026, g: 0.29097453, b: 0.09558598, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -232,7 +232,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &269694169
+--- !u!1001 &258580153
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 8039119492806286679, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
         type: 3}
       propertyPath: m_Name
-      value: Bandit
+      value: Bandit_0
       objectReference: {fileID: 0}
     - target: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
         type: 3}
@@ -301,17 +301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c21ec85f610e4f44ae0e3132b6725ce, type: 3}
---- !u!4 &269694170 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 269694169}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &269694171 stripped
+--- !u!114 &258580154 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8039119492806286677, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
     type: 3}
-  m_PrefabInstance: {fileID: 269694169}
+  m_PrefabInstance: {fileID: 258580153}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -319,6 +313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de79ee4981fa4f54f80d2028a32371a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &258580155 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8039119492806286676, guid: 2c21ec85f610e4f44ae0e3132b6725ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 258580153}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &445233842
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ Transform:
   - {fileID: 778583758}
   - {fileID: 1311820432}
   - {fileID: 2033564461}
-  - {fileID: 269694170}
+  - {fileID: 258580155}
   - {fileID: 1814117152}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -776,7 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevel: 1
   enemies:
-  - {fileID: 269694171}
+  - {fileID: 258580154}
   freeShoot: 0
 --- !u!1 &963194225
 GameObject:
@@ -815,7 +815,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8470589, g: 0.7372549, b: 0.39607847, a: 0}
+  m_BackGroundColor: {r: 0.8, g: 0.6117647, b: 0.3137255, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2172,7 +2172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446305556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -2, z: 3}
+  m_LocalPosition: {x: -1.8, y: -2.4, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}

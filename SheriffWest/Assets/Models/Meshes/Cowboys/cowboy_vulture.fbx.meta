@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99a34980a15d3594aaa600bf63ee03a0
+guid: cc2e816fbebfb834fbb0a7f1ba4c279a
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable:
@@ -7,14 +7,20 @@ ModelImporter:
       74: -3100369314251171874
     second: Idle
   - first:
-      74: -1068325664247336573
-    second: TakeDamage
-  - first:
       74: -3704289112126983070
     second: Shoot
   - first:
+      74: -1068325664247336573
+    second: TakeDamage
+  - first:
       74: 4348485665485846014
     second: Death
+  - first:
+      74: 885944232402757753
+    second: Armature|Action
+  - first:
+      74: 4781951162920444690
+    second: Armature|ArmatureAction
   - first:
       74: -982115091633673366
     second: Armature|Death
@@ -85,8 +91,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: TakeDamage
-      takeName: TakeDamage
+      name: Shoot
+      takeName: Shoot
       internalID: 0
       firstFrame: 0
       lastFrame: 10
@@ -114,8 +120,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Shoot
-      takeName: Shoot
+      name: TakeDamage
+      takeName: TakeDamage
       internalID: 0
       firstFrame: 0
       lastFrame: 10
@@ -146,8 +152,8 @@ ModelImporter:
       name: Death
       takeName: Death
       internalID: 0
-      firstFrame: 0
-      lastFrame: 20
+      firstFrame: 1
+      lastFrame: 13
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

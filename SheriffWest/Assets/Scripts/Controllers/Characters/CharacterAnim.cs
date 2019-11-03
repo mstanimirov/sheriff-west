@@ -10,6 +10,10 @@ public class CharacterAnim : MonoBehaviour
     public System.Action OnHitAnimOver = delegate { };
     public System.Action OnAttackAnimOver = delegate { };
 
+    public System.Action OnShoot = delegate { };
+    public System.Action OnLeftHandShoot = delegate { };
+    public System.Action OnRightHandShoot = delegate { };
+
     #region Private Vars
 
     private Animator characterAnimator;
@@ -23,21 +27,24 @@ public class CharacterAnim : MonoBehaviour
 
     }
 
-    public void Die() {
+    public void Die()
+    {
 
         characterAnimator.SetTrigger(Constants.dieTrigger);
 
     }
-    
 
-    public void Attack() {
+
+    public void Attack()
+    {
 
         characterAnimator.SetTrigger(Constants.shootTrigger);
 
     }
 
 
-    public void TakeDamage() {
+    public void TakeDamage()
+    {
 
         characterAnimator.SetTrigger(Constants.damageTrigger);
 
@@ -66,15 +73,35 @@ public class CharacterAnim : MonoBehaviour
 
     }
 
-    public void OnTakeDamage() {
+    public void OnTakeDamage()
+    {
 
         OnHitAnimOver();
 
     }
 
-    public void ShakeCamera() {
+    public void ShakeCamera()
+    {
 
         CameraController.instance.Shake(.15f, .05f);
+
+    }
+
+    public void Shoot() {
+
+        OnShoot();
+
+    }
+
+    public void LeftHandShoot() {
+
+        OnLeftHandShoot();
+
+    }
+
+    public void RightHandShoot() {
+
+        OnRightHandShoot();
 
     }
 
