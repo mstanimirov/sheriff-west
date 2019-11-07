@@ -31,6 +31,14 @@ public class Snake : EnemyController
 
     }
 
+    protected override void OnDisable()
+    {
+
+        base.OnDisable();
+        characterAnim.OnShoot -= gun.Shoot;
+
+    }
+
     public override void OnAttack(IDamageable target)
     {
 

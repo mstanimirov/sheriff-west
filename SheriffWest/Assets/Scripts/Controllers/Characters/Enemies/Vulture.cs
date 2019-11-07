@@ -32,6 +32,16 @@ public class Vulture : EnemyController
 
     }
 
+    protected override void OnDisable()
+    {
+
+        base.OnDisable();
+
+        characterAnim.OnLeftHandShoot -= guns[0].Shoot;
+        characterAnim.OnRightHandShoot -= guns[1].Shoot;
+
+    }
+
     public override void OnAttack(IDamageable target)
     {
 
