@@ -820,7 +820,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.8, g: 0.6117647, b: 0.3137255, a: 0}
+  m_BackGroundColor: {r: 0.8666667, g: 0.6156863, b: 0.21960784, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2887,6 +2887,11 @@ PrefabInstance:
     - target: {fileID: 4342250733695516386, guid: d6412d4a1de823f4a97ae64f07cbaabc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5056131166101351657, guid: d6412d4a1de823f4a97ae64f07cbaabc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

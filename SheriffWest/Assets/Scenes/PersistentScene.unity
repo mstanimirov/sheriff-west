@@ -569,4 +569,4 @@ MonoBehaviour:
   levelAt: 0
   maxLevels: 9
   sceneController: {fileID: 1737848218}
-  resetOnStart: 1
+  resetOnStart: 0

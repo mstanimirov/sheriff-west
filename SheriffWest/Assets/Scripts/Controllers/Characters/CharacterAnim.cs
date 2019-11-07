@@ -5,6 +5,8 @@ using UnityEngine;
 public class CharacterAnim : MonoBehaviour
 {
 
+    public GameObject groundHitEffect;
+
     public System.Action OnDeathOver = delegate { };
     public System.Action OnContactOver = delegate { };
     public System.Action OnHitAnimOver = delegate { };
@@ -82,6 +84,9 @@ public class CharacterAnim : MonoBehaviour
 
     public void ShakeCamera()
     {
+
+        if (groundHitEffect)
+            groundHitEffect.SetActive(true);
 
         CameraController.instance.Shake(.15f, .05f);
 
