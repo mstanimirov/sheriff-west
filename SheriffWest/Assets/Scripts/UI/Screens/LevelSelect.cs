@@ -32,7 +32,7 @@ public class LevelSelect : MonoBehaviour
     {
 
         levelAt = GameManager.instance.levelAt;
-        totalLevels = SceneManager.sceneCountInBuildSettings - 3;
+        totalLevels = SceneManager.sceneCountInBuildSettings - 4;
 
         for (int i = 0; i < totalLevels; i++)
         {

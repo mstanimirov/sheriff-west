@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             ResetData();
 
         LoadData();
-        maxLevels = SceneManager.sceneCountInBuildSettings - 3;
+        maxLevels = SceneManager.sceneCountInBuildSettings - 4;
 
     }
 
@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
 
         levelAt = 0;
         SaveSystem.SaveData(this);
+        PlayerPrefs.DeleteAll();
 
     }
 
@@ -91,6 +92,13 @@ public class GameManager : MonoBehaviour
     {
 
         sceneController.FadeAndLoadScene("LevelSelect");
+
+    }
+
+    public void Settings()
+    {
+
+        sceneController.FadeAndLoadScene("Settings");
 
     }
 

@@ -308,7 +308,7 @@ public class GameController : MonoBehaviour
         if (!gameManager)
             return;
 
-        gameManager.MainMenu();
+        gameManager.StartGame();
 
     }
 

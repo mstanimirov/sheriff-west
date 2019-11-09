@@ -14,13 +14,13 @@ public class MainMenu : MonoBehaviour
 
     public void SettingsClick() {
 
-
+        GameManager.instance.Settings();
 
     }
 
     public void QuitClick() {
 
-
+        Application.Quit();
 
     }
 
