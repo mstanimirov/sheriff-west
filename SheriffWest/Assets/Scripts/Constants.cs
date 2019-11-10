@@ -40,4 +40,28 @@ public class Constants
 
     #endregion
 
+    #region Audio
+
+    public const string s_music = "BackgroundMusic";
+    public const string s_click = "Click";
+    public const string s_impact = "Impact";
+    public const string s_groundHit = "GroundHit";
+    public const string s_pistolShot = "PistolShot";
+    public const string s_chickenCluck = "ChickenCluck";
+    public const string s_chickenCluck1 = "ChickenCluck1";
+
+    #endregion
+
+    #region PlayerPrefs
+
+    public const string pp_quality = "quality";
+    public const string pp_resolution = "resolution";
+    public const string pp_fullscreen = "fullScreen";
+    public const string pp_musicVolume = "musicVolume";
+    public const string pp_soundVolume = "soundVolume";
+    public const string pp_firstTime = "settingsFirstTime";
+
+
+    #endregion
+
 }

@@ -29,6 +29,8 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
     private Vector3 smoothedPosition;
 
     private Weapon gun;
+
+    private AudioManager audioManager;
     private CharacterAnim characterAnim;
     private CharacterStats characterStats;
 
@@ -74,6 +76,7 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
     private void Start()
     {
 
+        audioManager = AudioManager.instance;
         characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
@@ -127,6 +130,9 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
     {
 
         bloodParticle.SetActive(true);
+
+        if (audioManager)
+            audioManager.PlaySound(Constants.s_impact);
 
         if (characterStats.ModifyLives(amount))
             characterAnim.Die();

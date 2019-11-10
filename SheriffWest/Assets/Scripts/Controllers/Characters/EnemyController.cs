@@ -29,6 +29,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
     private bool isCrRunning;
     private float reactionTime;
 
+    protected AudioManager audioManager;
     protected CharacterAnim characterAnim;
     protected CharacterStats characterStats;
 
@@ -63,6 +64,7 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
 
         isTarget = false;
 
+        audioManager = AudioManager.instance;
         characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
@@ -90,6 +92,9 @@ public abstract class EnemyController : MonoBehaviour, IDamageable, IShooter
             characterAnim.Die();
         else
             characterAnim.TakeDamage();
+
+        if (audioManager)
+            audioManager.PlaySound(Constants.s_impact);
 
     }
 

@@ -59,6 +59,7 @@ public class LevelSelect : MonoBehaviour
     {
 
         GameManager.instance.MainMenu();
+        AudioManager.instance.PlaySound(Constants.s_click);
 
     }
 

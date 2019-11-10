@@ -309,6 +309,7 @@ public class GameController : MonoBehaviour
             return;
 
         gameManager.StartGame();
+        AudioManager.instance.PlaySound(Constants.s_click);
 
     }
 
@@ -319,6 +320,7 @@ public class GameController : MonoBehaviour
             return;
 
         gameManager.LoadLevel(nextLevel - 1);
+        AudioManager.instance.PlaySound(Constants.s_click);
 
     }
 
@@ -328,6 +330,7 @@ public class GameController : MonoBehaviour
             return;
 
         gameManager.LoadLevel(nextLevel);
+        AudioManager.instance.PlaySound(Constants.s_click);
 
     }
 

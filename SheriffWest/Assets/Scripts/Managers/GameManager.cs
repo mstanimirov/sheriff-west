@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
 
         LoadData();
         maxLevels = SceneManager.sceneCountInBuildSettings - 4;
+        AudioManager.instance.PlaySound(Constants.s_music);
 
     }
 
@@ -92,6 +93,7 @@ public class GameManager : MonoBehaviour
     {
 
         sceneController.FadeAndLoadScene("LevelSelect");
+        //AudioManager.instance.StopSound(Constants.s_music);
 
     }
 

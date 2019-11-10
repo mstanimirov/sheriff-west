@@ -28,6 +28,7 @@ public class LevelButton : MonoBehaviour
     public void LoadLevel() {
 
         GameManager.instance.LoadLevel(levelToLoad);
+        AudioManager.instance.PlaySound(Constants.s_click);
 
     }
 

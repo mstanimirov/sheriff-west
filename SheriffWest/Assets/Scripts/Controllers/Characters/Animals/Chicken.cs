@@ -94,12 +94,26 @@ public class Chicken : EnemyController
     {
 
         base.OnAttack(target);
+
+        if (audioManager)
+            audioManager.PlaySound(Constants.s_chickenCluck);
+
         MoveAway(() => {
 
             direction *= -1;
             mobState = State.Idle;
 
         });
+
+    }
+
+    public override void TakeDamage(int amount)
+    {
+
+        base.TakeDamage(amount);
+
+        if (audioManager)
+            audioManager.PlaySound(Constants.s_chickenCluck1);
 
     }
 

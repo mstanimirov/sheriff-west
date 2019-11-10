@@ -19,12 +19,14 @@ public class CharacterAnim : MonoBehaviour
     #region Private Vars
 
     private Animator characterAnimator;
+    private AudioManager audioManager;
 
     #endregion
 
     private void Awake()
     {
 
+        audioManager = AudioManager.instance;
         characterAnimator = GetComponent<Animator>();
 
     }
@@ -87,6 +89,9 @@ public class CharacterAnim : MonoBehaviour
 
         if (groundHitEffect)
             groundHitEffect.SetActive(true);
+
+        if (audioManager)
+            audioManager.PlaySound(Constants.s_groundHit);
 
         CameraController.instance.Shake(.15f, .05f);
 

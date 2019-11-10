@@ -56,4 +56,23 @@ public class GamePlayUI : MonoBehaviour
 
     }
 
+    public void MainMenu() {
+
+        GameController.instance.MainMenu();
+
+    }
+
+    public void LoadNextLevel() {
+
+        GameController.instance.LoadNextLevel();
+
+    }
+
+    public void ResetCurrentLevel() {
+
+
+        GameController.instance.ReloadLevel();
+
+    }
+
 }
