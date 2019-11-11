@@ -82,8 +82,8 @@ MonoBehaviour:
   isEnemy: 0
   enemyName: Chicken
   enemyDeadName: Dead Chicken
-  minReactionTime: 0.49
-  maxReactionTime: 0.51
+  minReactionTime: 0.275
+  maxReactionTime: 0.276
   thumb: {fileID: 21300000, guid: a764bbd044fdc5049a1226d285260ded, type: 3}
   infoPanel: {fileID: 6199364026467302653}
   liveGraphic: {fileID: 445988758648814756}
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLives: 1
   isDead: 0
+  currentLives: 0
 --- !u!65 &445988758502368215
 BoxCollider:
   m_ObjectHideFlags: 0

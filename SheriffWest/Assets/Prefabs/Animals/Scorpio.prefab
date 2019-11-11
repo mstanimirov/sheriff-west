@@ -127,8 +127,8 @@ MonoBehaviour:
   isEnemy: 0
   enemyName: Scorpio
   enemyDeadName: Dead Scorpio
-  minReactionTime: 0.49
-  maxReactionTime: 0.51
+  minReactionTime: 0.25
+  maxReactionTime: 0.251
   thumb: {fileID: 21300000, guid: e174b7ad3e1f527468dc48cc361af94f, type: 3}
   infoPanel: {fileID: 7861287287993611094}
   liveGraphic: {fileID: 6654321354998589914}
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLives: 1
   isDead: 0
+  currentLives: 0
 --- !u!65 &6654321355643448959
 BoxCollider:
   m_ObjectHideFlags: 0

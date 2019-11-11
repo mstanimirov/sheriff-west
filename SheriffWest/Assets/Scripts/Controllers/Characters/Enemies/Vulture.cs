@@ -7,10 +7,12 @@ public class Vulture : EnemyController
 
     [Header("Custom Settings: ")]
     public GameObject bloodParticle;
+    public EnemyController minion;
 
     #region Private Vars
 
     private Weapon[] guns;
+    private IDamageable target;
 
     #endregion
 
@@ -30,6 +32,8 @@ public class Vulture : EnemyController
         characterAnim.OnLeftHandShoot += guns[0].Shoot;
         characterAnim.OnRightHandShoot += guns[1].Shoot;
 
+        characterAnim.OnAttackAnimOver += OnAttackOver;
+
     }
 
     protected override void OnDisable()
@@ -40,20 +44,29 @@ public class Vulture : EnemyController
         characterAnim.OnLeftHandShoot -= guns[0].Shoot;
         characterAnim.OnRightHandShoot -= guns[1].Shoot;
 
+        characterAnim.OnAttackAnimOver -= OnAttackOver;
+
     }
 
     public override void OnAttack(IDamageable target)
     {
 
         base.OnAttack(target);
+        this.target = target;
 
     }
 
     public override void TakeDamage(int amount)
     {
 
-        bloodParticle.SetActive(true);
         base.TakeDamage(amount);
+        bloodParticle.SetActive(true);
+
+        if (characterStats.currentLives == 1) {
+
+            SpawnMinion();
+
+        }
 
     }
 
@@ -62,6 +75,29 @@ public class Vulture : EnemyController
 
         base.OnDeath();
         GameController.instance.UnlockNextLevel();
+
+    }
+
+    public void SpawnMinion() {
+
+        if (minion.gameObject.activeSelf == true)
+            return;
+
+        minion.gameObject.SetActive(true);
+        GameController.instance.enemies.Add(minion);
+
+    }
+
+    public void OnAttackOver() {
+
+        if (minion.gameObject.activeSelf == false)
+            return;
+
+        if (minion.IsDead())
+            return;
+
+        if (target != null)
+            minion.OnAttack(target);
 
     }
 

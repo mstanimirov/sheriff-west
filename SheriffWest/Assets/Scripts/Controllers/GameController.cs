@@ -190,6 +190,19 @@ public class GameController : MonoBehaviour
 
     public void AimAt() {
 
+        if (!enemy.isEnemy) {
+
+            if (enemy.IsDead()) {
+
+                enemies[target].Target(false);
+                enemies.Remove(enemy);
+                target = 0;
+                enemy = enemies[target];
+
+            }
+
+        }
+
         aimController.SetTarget(enemy.transform);
         aimController.UpdatePosition();
 

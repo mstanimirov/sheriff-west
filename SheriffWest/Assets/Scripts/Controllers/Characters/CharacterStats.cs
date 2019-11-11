@@ -10,10 +10,11 @@ public class CharacterStats : MonoBehaviour
 
     [HideInInspector]
     public bool isDead;
+    [HideInInspector]
+    public int currentLives;
 
     #region Private Vars
 
-    private int currentLives;
     private BoxCollider boxCollider;
 
     #endregion

@@ -128,8 +128,8 @@ MonoBehaviour:
   isEnemy: 1
   enemyName: Wyatt
   enemyDeadName: Dead Wyatt
-  minReactionTime: 0.49
-  maxReactionTime: 0.51
+  minReactionTime: 0.352
+  maxReactionTime: 0.353
   thumb: {fileID: 21300000, guid: 96775ddb616a503429a008a1df95a323, type: 3}
   infoPanel: {fileID: 2456323319665183516}
   liveGraphic: {fileID: 8039119491986149280}
@@ -148,8 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c6b602808de99429e455ed5e44ab8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 1
+  maxLives: 3
   isDead: 0
+  currentLives: 0
 --- !u!65 &8039119492806286699
 BoxCollider:
   m_ObjectHideFlags: 0

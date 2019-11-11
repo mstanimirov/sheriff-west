@@ -115,8 +115,8 @@ MonoBehaviour:
   isEnemy: 1
   enemyName: Earle
   enemyDeadName: Dead Earle
-  minReactionTime: 0.39
-  maxReactionTime: 0.41
+  minReactionTime: 0.295
+  maxReactionTime: 0.296
   thumb: {fileID: 21300000, guid: 7ddabdf56701896449246503a9b3d02f, type: 3}
   infoPanel: {fileID: 4717245787646529682}
   liveGraphic: {fileID: 932574509041914926}
@@ -135,8 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c6b602808de99429e455ed5e44ab8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 1
+  maxLives: 6
   isDead: 0
+  currentLives: 0
 --- !u!65 &932574509870139109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -496,11 +497,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GroundHitEffect
-      objectReference: {fileID: 0}
-    - target: {fileID: 6345992782971451508, guid: f55788b0856701443817c89037a88772,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6345992782971451507, guid: f55788b0856701443817c89037a88772,
         type: 3}
