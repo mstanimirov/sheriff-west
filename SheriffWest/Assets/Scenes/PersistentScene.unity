@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.43508026, g: 0.29097453, b: 0.09558598, a: 1}
+  m_IndirectSpecularColor: {r: 0.41728175, g: 0.27888805, b: 0.09497776, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,6 +120,66 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &312562202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 312562203}
+  m_Layer: 0
+  m_Name: Impacts
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &312562203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312562202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 549871080}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &319192679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 319192680}
+  m_Layer: 0
+  m_Name: Basic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &319192680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319192679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 549871080}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549871078
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,56 +214,181 @@ MonoBehaviour:
     type: 2}
   soundMixer: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
     type: 2}
-  sounds:
+  basicSounds:
+  - name: Click
+    parentGroup: {fileID: 319192679}
+    clip: {fileID: 8300000, guid: b433018136f5a1c4b8ee62bb0df6a7c4, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 1
+    pitch: 1
   - name: GroundHit
+    parentGroup: {fileID: 319192679}
     clip: {fileID: 8300000, guid: bbfc87f42b932cc439b2ffbf2b66de1d, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
     loop: 0
-    isSound: 1
     volume: 1
     pitch: 1
+  - name: BackgroundMusic
+    parentGroup: {fileID: 319192679}
+    clip: {fileID: 8300000, guid: dff9751b6b286cd41960645d0b993a5f, type: 3}
+    mixerGroup: {fileID: 5224372398449807878, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
     source: {fileID: 0}
-  - name: Impact
-    clip: {fileID: 8300000, guid: c312ac3aaf9ee9344b2796157fa64234, type: 3}
-    loop: 0
-    isSound: 1
+    loop: 1
     volume: 1
     pitch: 1
+  - name: Reload0
+    parentGroup: {fileID: 319192679}
+    clip: {fileID: 8300000, guid: 0ef5ab16d29f8a54cac9aad4a37a3516, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
     source: {fileID: 0}
-  - name: PistolShot
-    clip: {fileID: 8300000, guid: ab4ea1076f80b834293cf703929f3ef7, type: 3}
     loop: 0
-    isSound: 1
     volume: 1
     pitch: 1
+  - name: Reload1
+    parentGroup: {fileID: 319192679}
+    clip: {fileID: 8300000, guid: 7719dc6910ac375488df2eb566b4f0d7, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
     source: {fileID: 0}
+    loop: 0
+    volume: 1
+    pitch: 1
+  animalSounds:
   - name: ChickenCluck
+    parentGroup: {fileID: 1689036526}
     clip: {fileID: 8300000, guid: b5e9302c53aabcb42b8dfd6b721f4ebd, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
     loop: 0
-    isSound: 1
     volume: 1
     pitch: 1
-    source: {fileID: 0}
   - name: ChickenCluck1
+    parentGroup: {fileID: 1689036526}
     clip: {fileID: 8300000, guid: cbcdeb86247594e45b063db4293055ec, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
     loop: 0
-    isSound: 1
     volume: 1
     pitch: 1.25
+  impactSounds:
+  - name: Impact
+    parentGroup: {fileID: 312562202}
+    clip: {fileID: 8300000, guid: 2bcc9f73549f9764b9f66bb4ee48ddf3, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
     source: {fileID: 0}
-  - name: BackgroundMusic
-    clip: {fileID: 8300000, guid: e3e609af18415ae4aaac544425602fc9, type: 3}
-    loop: 1
-    isSound: 0
-    volume: 1
-    pitch: 1
-    source: {fileID: 0}
-  - name: Click
-    clip: {fileID: 8300000, guid: b433018136f5a1c4b8ee62bb0df6a7c4, type: 3}
     loop: 0
-    isSound: 1
     volume: 1
     pitch: 1
+  - name: Impact1
+    parentGroup: {fileID: 312562202}
+    clip: {fileID: 8300000, guid: c312ac3aaf9ee9344b2796157fa64234, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
     source: {fileID: 0}
+    loop: 0
+    volume: 1
+    pitch: 1
+  gunshotSounds:
+  - name: PistolShotYou
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotWyatt
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotWayne
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotPorter
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotEarle
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotHenry
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotCole
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotCalvin
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotAmos
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 0.5
+    pitch: 1
+  - name: PistolShotMissed
+    parentGroup: {fileID: 1275559965}
+    clip: {fileID: 8300000, guid: 9d0c77e85cfb0b944bf46960133d612b, type: 3}
+    mixerGroup: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+      type: 2}
+    source: {fileID: 0}
+    loop: 0
+    volume: 1
+    pitch: 1
 --- !u!4 &549871080
 Transform:
   m_ObjectHideFlags: 0
@@ -214,7 +399,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 319192680}
+  - {fileID: 1689036527}
+  - {fileID: 312562203}
+  - {fileID: 1275559966}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -488,6 +677,36 @@ Transform:
   m_Father: {fileID: 1446305557}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 30, y: -30, z: 0}
+--- !u!1 &1275559965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275559966}
+  m_Layer: 0
+  m_Name: Gunshots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1275559966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275559965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 549871080}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301976082
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,6 +803,36 @@ Transform:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1689036526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689036527}
+  m_Layer: 0
+  m_Name: Animals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689036527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689036526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 549871080}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737848216
 GameObject:

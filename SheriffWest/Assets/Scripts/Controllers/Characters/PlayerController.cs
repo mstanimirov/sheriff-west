@@ -80,6 +80,8 @@ public class PlayerController : MonoBehaviour, IDamageable, IShooter
         characterAnim.OnDeathOver += OnDeath;
         characterAnim.OnHitAnimOver += GameController.instance.EndRound;
 
+        gun.SetAudioName(Constants.s_pistolShot + playerName);
+
     }
 
     private void Update()

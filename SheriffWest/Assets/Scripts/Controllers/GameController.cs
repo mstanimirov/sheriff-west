@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     [Header("General Settings:")]
     public int nextLevel;
     public List<EnemyController> enemies;
+    public TutorialScreen tutorialScreen;
 
     [Header("Debug Settings: ")]
     public bool freeShoot;
@@ -20,6 +21,7 @@ public class GameController : MonoBehaviour
 
     private int target;
 
+    private bool firstTime;
     private bool isCrRunning;
 
     private float delay;
@@ -76,6 +78,15 @@ public class GameController : MonoBehaviour
         delay = 0;
         target = -1;
         gameState = GameState.Target;
+
+        if (tutorialScreen) {
+
+            firstTime = PlayerPrefs.GetInt("FirstTime") == 0;
+
+            if (firstTime)
+                ShowTargetTutorial();
+
+        }
 
     }
 
@@ -142,6 +153,8 @@ public class GameController : MonoBehaviour
                     player.AlignWithTarget(enemy, () => {
 
                         StartCountDown();
+                        if (firstTime && tutorialScreen)
+                            HideTutorial();
 
                     });
 
@@ -183,6 +196,9 @@ public class GameController : MonoBehaviour
         if (target > enemies.Count - 1)
             target = 0;
 
+        if (firstTime && tutorialScreen)
+            HideTutorial();
+
         enemy = enemies[target];
         AimAt();
 
@@ -208,6 +224,9 @@ public class GameController : MonoBehaviour
 
         enemy.Target(true);
 
+        if (firstTime && tutorialScreen)
+            ShowShootTutorial();
+
     }       
 
     #region Score
@@ -216,6 +235,14 @@ public class GameController : MonoBehaviour
 
         enemy.FinishRound();
         player.FinishRound();
+
+        if (firstTime && tutorialScreen) {
+
+            HideTutorial();
+            PlayerPrefs.SetInt("FirstTime", 1);
+            firstTime = false;
+
+        }
 
         if (gameState != GameState.Wait)
         {
@@ -231,6 +258,7 @@ public class GameController : MonoBehaviour
 
                     FirstToAttackE();
                     gameplayScreen.ShowInfo("TOO EARLY");
+                    //AudioManager.instance.PlaySound("PistolShotMissed");
 
                     break;
                 case GameState.Shot:
@@ -294,8 +322,11 @@ public class GameController : MonoBehaviour
 
         gameState = GameState.Prep;
         gameplayScreen.SetTimerText(Constants.gameReady);
+        AudioManager.instance.PlaySound("Reload0");
+
         yield return textRefresh;
 
+        AudioManager.instance.PlaySound("Reload1");
         gameplayScreen.SetTimerText(Constants.gameSteady);
 
         float randomTime = Random.Range(1f, 5f);
@@ -306,8 +337,20 @@ public class GameController : MonoBehaviour
         gameState = GameState.Shot;
         gameplayScreen.SetTimerText(Constants.gameDraw);
 
-        enemy.StartRound();
-        player.StartRound();
+        if (firstTime && tutorialScreen)
+        {
+
+            player.StartRound();
+            ShowShootTutorial();
+
+        }
+        else
+        {
+
+            enemy.StartRound();
+            player.StartRound();
+
+        }
 
     }
 
@@ -371,6 +414,31 @@ public class GameController : MonoBehaviour
             return;
 
         gameplayScreen.RestartLevel();
+
+    }
+
+    #endregion
+
+    #region Tutorial
+
+    public void ShowShootTutorial() {
+
+        tutorialScreen.gameObject.SetActive(true);
+        tutorialScreen.ShowShootTutorial();
+
+    }
+
+    public void ShowTargetTutorial() {
+
+        tutorialScreen.gameObject.SetActive(true);
+        tutorialScreen.ShowTargetTutorial();
+
+    }
+
+    public void HideTutorial() {
+
+        tutorialScreen.gameObject.SetActive(false);
+        tutorialScreen.HideAll();
 
     }
 

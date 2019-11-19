@@ -7,10 +7,12 @@ public class Snake : EnemyController
 
     [Header("Custom Settings: ")]
     public GameObject bloodParticle;
+    public EnemyController minion;
 
     #region Private Vars
 
     private Weapon gun;
+    private IDamageable target;
 
     #endregion
 
@@ -28,6 +30,8 @@ public class Snake : EnemyController
         base.Start();
 
         characterAnim.OnShoot += gun.Shoot;
+        characterAnim.OnAttackAnimOver += OnAttackOver;
+        gun.SetAudioName(Constants.s_pistolShot + enemyName);
 
     }
 
@@ -36,6 +40,7 @@ public class Snake : EnemyController
 
         base.OnDisable();
         characterAnim.OnShoot -= gun.Shoot;
+        characterAnim.OnAttackAnimOver -= OnAttackOver;
 
     }
 
@@ -43,14 +48,22 @@ public class Snake : EnemyController
     {
 
         base.OnAttack(target);
+        this.target = target;
 
     }
 
     public override void TakeDamage(int amount)
     {
 
-        bloodParticle.SetActive(true);
         base.TakeDamage(amount);
+        bloodParticle.SetActive(true);
+
+        if (characterStats.currentLives == 1)
+        {
+
+            SpawnMinion();
+
+        }
 
     }
 
@@ -59,6 +72,31 @@ public class Snake : EnemyController
 
         base.OnDeath();
         GameController.instance.UnlockNextLevel();
+
+    }
+
+    public void SpawnMinion()
+    {
+
+        if (minion.gameObject.activeSelf == true)
+            return;
+
+        minion.gameObject.SetActive(true);
+        GameController.instance.enemies.Add(minion);
+
+    }
+
+    public void OnAttackOver()
+    {
+
+        if (minion.gameObject.activeSelf == false)
+            return;
+
+        if (minion.IsDead())
+            return;
+
+        if (target != null)
+            minion.OnAttack(target);
 
     }
 

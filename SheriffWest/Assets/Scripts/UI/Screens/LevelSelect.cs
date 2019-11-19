@@ -32,7 +32,7 @@ public class LevelSelect : MonoBehaviour
     {
 
         levelAt = GameManager.instance.levelAt;
-        totalLevels = SceneManager.sceneCountInBuildSettings - 4;
+        totalLevels = SceneManager.sceneCountInBuildSettings - 5;
 
         for (int i = 0; i < totalLevels; i++)
         {
@@ -60,6 +60,26 @@ public class LevelSelect : MonoBehaviour
 
         GameManager.instance.MainMenu();
         AudioManager.instance.PlaySound(Constants.s_click);
+
+    }
+
+    public void ResetAllData() {
+
+        GameManager.instance.ResetProgress();
+
+        levelAt = GameManager.instance.levelAt;
+        totalLevels = SceneManager.sceneCountInBuildSettings - 5;
+        SetLevelButton();
+
+    }
+
+    public void UnlockAll() {
+
+        GameManager.instance.UnlockAll();
+
+        levelAt = GameManager.instance.levelAt;
+        totalLevels = SceneManager.sceneCountInBuildSettings - 5;
+        SetLevelButton();
 
     }
 

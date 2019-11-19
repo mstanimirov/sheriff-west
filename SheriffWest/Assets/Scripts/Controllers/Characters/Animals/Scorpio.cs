@@ -109,6 +109,7 @@ public class Scorpio : EnemyController
 
         target.TakeDamage(-1);
         CameraController.instance.Shake(.15f, .05f);
+        AudioManager.instance.PlaySound("Impact1");
 
     }
 

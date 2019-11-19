@@ -34,6 +34,9 @@ public class Vulture : EnemyController
 
         characterAnim.OnAttackAnimOver += OnAttackOver;
 
+        guns[0].SetAudioName(Constants.s_pistolShot + enemyName);
+        guns[1].SetAudioName(Constants.s_pistolShot + enemyName);
+
     }
 
     protected override void OnDisable()

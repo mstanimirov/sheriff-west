@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
 
     #region Private Vars
 
+    private string audioName;
     private AudioManager audioManager;
 
     #endregion
@@ -37,11 +38,17 @@ public class Weapon : MonoBehaviour
 
         muzzleFlash.Show();
 
-        if (audioManager)
-            audioManager.PlaySound(Constants.s_pistolShot);
+        if (audioManager && audioName != "")
+            audioManager.PlaySound(audioName);
 
         CameraController.instance.Shake(.15f, .1f);
         ObjectPooler.instance.GetFromPool(shooterType == ShooterType.Enemy ? Constants.bulletPoolTagE : Constants.bulletPoolTagP, shotPoint.position, shotPoint.rotation);
+
+    }
+
+    public void SetAudioName(string audioName) {
+
+        this.audioName = audioName;
 
     }
 

@@ -13,8 +13,17 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup soundMixer;
 
     [Header("Sound Settings:")]
-    public Sound[] sounds;
+    public Sound[] basicSounds;
+    public Sound[] animalSounds;
+    public Sound[] impactSounds;
+    public Sound[] gunshotSounds;
     public static AudioManager instance;
+
+    #region Private Vars
+
+    private List<Sound> allSounds = new List<Sound>();
+
+    #endregion
 
     void Awake()
     {
@@ -24,20 +33,45 @@ public class AudioManager : MonoBehaviour
 
         instance = this;
 
-        foreach (Sound s in sounds)
+        foreach(Sound s in basicSounds)
         {
 
-            s.source = gameObject.AddComponent<AudioSource>();
+            allSounds.Add(s);
+
+        }
+        
+        foreach (Sound s in animalSounds)
+        {
+
+            allSounds.Add(s);
+
+        }
+
+        foreach (Sound s in impactSounds)
+        {
+
+            allSounds.Add(s);
+
+        }
+
+        foreach (Sound s in gunshotSounds)
+        {
+
+            allSounds.Add(s);
+
+        }
+
+        foreach (Sound s in allSounds)
+        {
+
+            s.source = s.parentGroup.gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
 
-            if (s.isSound)
-                s.source.outputAudioMixerGroup = soundMixer;
-            else
-                s.source.outputAudioMixerGroup = musicMixer;
+            s.source.outputAudioMixerGroup = s.mixerGroup;
 
         }
 
@@ -52,9 +86,9 @@ public class AudioManager : MonoBehaviour
     }
 
     public void PlaySound(string name)
-    {
+    {        
 
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = allSounds.Find(sound => sound.name == name);
         if (s != null)
         {
 
@@ -67,7 +101,7 @@ public class AudioManager : MonoBehaviour
     public void StopSound(string name)
     {
 
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = allSounds.Find(sound => sound.name == name);
         if (s != null)
         {
 
@@ -80,7 +114,7 @@ public class AudioManager : MonoBehaviour
     public void SetSoundVolume(string name, float volume)
     {
 
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = allSounds.Find(sound => sound.name == name);
         if (s != null)
         {
 
@@ -93,7 +127,7 @@ public class AudioManager : MonoBehaviour
     public bool IsSoundPlaying(string name)
     {
 
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sound s = allSounds.Find(sound => sound.name == name);
         if (s != null)
         {
 

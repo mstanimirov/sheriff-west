@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -96,7 +96,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 0e962011cba576f46b0e5da57e36e941,
+    type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
@@ -516,6 +517,104 @@ MonoBehaviour:
     parent: {fileID: 1583500251}
     prefab: {fileID: 8587080383419348109, guid: 783bcace30a0e5540aac7c598966a236,
       type: 3}
+--- !u!1 &803449904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 803449905}
+  - component: {fileID: 803449906}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &803449905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803449904}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1446305557}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803449906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803449904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a5a20779cdf76408adc6bcc37b2b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: dc071cb07191ee74babb335163408585, type: 2}
+  musicMixer: {fileID: 5224372398449807878, guid: dc071cb07191ee74babb335163408585,
+    type: 2}
+  soundMixer: {fileID: 3725531441126701078, guid: dc071cb07191ee74babb335163408585,
+    type: 2}
+  sounds:
+  - name: GroundHit
+    clip: {fileID: 8300000, guid: bbfc87f42b932cc439b2ffbf2b66de1d, type: 3}
+    loop: 0
+    isSound: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Impact
+    clip: {fileID: 8300000, guid: 2bcc9f73549f9764b9f66bb4ee48ddf3, type: 3}
+    loop: 0
+    isSound: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: PistolShot
+    clip: {fileID: 8300000, guid: 058d8ce07218fa645a70287090253ad5, type: 3}
+    loop: 0
+    isSound: 1
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChickenCluck
+    clip: {fileID: 8300000, guid: b5e9302c53aabcb42b8dfd6b721f4ebd, type: 3}
+    loop: 0
+    isSound: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: ChickenCluck1
+    clip: {fileID: 8300000, guid: cbcdeb86247594e45b063db4293055ec, type: 3}
+    loop: 0
+    isSound: 1
+    volume: 1
+    pitch: 1.25
+    source: {fileID: 0}
+  - name: BackgroundMusic
+    clip: {fileID: 8300000, guid: dff9751b6b286cd41960645d0b993a5f, type: 3}
+    loop: 1
+    isSound: 0
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: b433018136f5a1c4b8ee62bb0df6a7c4, type: 3}
+    loop: 0
+    isSound: 1
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &906585668
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +668,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 1537470360}
   - {fileID: 186488368}
+  tutorialScreen: {fileID: 0}
   freeShoot: 0
 --- !u!1 &963194225
 GameObject:
@@ -1255,6 +1355,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
+  - {fileID: 803449905}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1418,6 +1519,11 @@ PrefabInstance:
     - target: {fileID: 8039119492806286676, guid: 3e2b6c904e00a8b4491d9c3bf81b8c70,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208928407395189914, guid: 3e2b6c904e00a8b4491d9c3bf81b8c70,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

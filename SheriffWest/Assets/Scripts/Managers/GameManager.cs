@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             ResetData();
 
         LoadData();
-        maxLevels = SceneManager.sceneCountInBuildSettings - 4;
+        maxLevels = SceneManager.sceneCountInBuildSettings - 5;
         AudioManager.instance.PlaySound(Constants.s_music);
 
     }
@@ -75,6 +75,22 @@ public class GameManager : MonoBehaviour
         levelAt = 0;
         SaveSystem.SaveData(this);
         PlayerPrefs.DeleteAll();
+
+    }
+
+    public void ResetProgress() {
+
+        levelAt = 0;
+        SaveSystem.SaveData(this);
+
+    }
+
+    public void UnlockAll() {
+
+        levelAt = maxLevels;
+        SaveSystem.SaveData(this);
+
+        PlayerPrefs.SetInt("FirstTime", 1);
 
     }
 

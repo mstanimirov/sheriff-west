@@ -22,6 +22,14 @@ public class Enemy : EnemyController
 
     }
 
+    protected override void Start()
+    {
+
+        base.Start();
+        gun.SetAudioName(Constants.s_pistolShot + enemyName);
+
+    }
+
     public override void OnAttack(IDamageable target)
     {
 
