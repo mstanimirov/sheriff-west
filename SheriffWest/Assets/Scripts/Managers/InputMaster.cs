@@ -6,10 +6,10 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class InputMaster : IInputActionCollection, IDisposable
+public class @InputMaster : IInputActionCollection, IDisposable
 {
-    private InputActionAsset asset;
-    public InputMaster()
+    public InputActionAsset asset { get; }
+    public @InputMaster()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""InputMaster"",
@@ -165,8 +165,8 @@ public class InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_RightClick;
     public struct GameplayActions
     {
-        private InputMaster m_Wrapper;
-        public GameplayActions(InputMaster wrapper) { m_Wrapper = wrapper; }
+        private @InputMaster m_Wrapper;
+        public GameplayActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @Click => m_Wrapper.m_Gameplay_Click;
         public InputAction @RightClick => m_Wrapper.m_Gameplay_RightClick;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
@@ -178,22 +178,22 @@ public class InputMaster : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_GameplayActionsCallbackInterface != null)
             {
-                Click.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnClick;
-                Click.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnClick;
-                Click.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnClick;
-                RightClick.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightClick;
-                RightClick.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightClick;
-                RightClick.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightClick;
+                @Click.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnClick;
+                @Click.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnClick;
+                @Click.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnClick;
+                @RightClick.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightClick;
+                @RightClick.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightClick;
+                @RightClick.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRightClick;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
             {
-                Click.started += instance.OnClick;
-                Click.performed += instance.OnClick;
-                Click.canceled += instance.OnClick;
-                RightClick.started += instance.OnRightClick;
-                RightClick.performed += instance.OnRightClick;
-                RightClick.canceled += instance.OnRightClick;
+                @Click.started += instance.OnClick;
+                @Click.performed += instance.OnClick;
+                @Click.canceled += instance.OnClick;
+                @RightClick.started += instance.OnRightClick;
+                @RightClick.performed += instance.OnRightClick;
+                @RightClick.canceled += instance.OnRightClick;
             }
         }
     }
